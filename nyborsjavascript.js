@@ -3,8 +3,9 @@ var enchantmentType1 = this.getField("Enchantment 1");
 var enchantmentType2 = this.getField("Enchantment 2");
 var enchantmentType3 = this.getField("Enchantment 3");
 
+// values, prefix/suffix, weapon/armor subtype, 
 var armorTypes = ["-Seletct Armor-", "Helmet", "Shield", "Breastplate", "Leather Armor", "Amulet"]
-var armorEnchantment1 = ["-1st Enchantment-", ["Absorption", 0], "Adamantine", "Agathys", "Animation"]
+var armorEnchantment1 = ["-1st Enchantment-", ["Absorption", "0-Absorption-0"], ["Adamantine", "1-Adamantine-1"], ["Agathys", "0-Agathys-0"], ["Animation", "0-Animation-2"]]
 var armorEnchantment2 = ["-2nd Enchantment-", ["Absorption", 0], "Adamantine", "Agathys", "Animation"]
 var armorEnchantment3 = ["-3rd Enchantment-", ["Absorption", 0], "Adamantine", "Agathys", "Animation"]
 
@@ -31,10 +32,9 @@ if (event.willCommit) {
       break;
     default:
       subType.setItems(["-Item Subtype-"]);
-      enchantmentType1.setItems("-1st Enchantment-")
-      enchantmentType2.setItems("-2nd Enchantment-")
-      enchantmentType3.setItems("-3rd Enchantment-")
+      enchantmentType1.setItems(["-1st Enchantment-"])
+      enchantmentType2.setItems(["-2nd Enchantment-"])
+      enchantmentType3.setItems(["-3rd Enchantment-"])
       break;
   }
-
 }
