@@ -26,6 +26,21 @@ switch (rarityDrop) {
       rarityText = "Common"
     }
     break;
+  case "– Rarity –":
+    if (2 <= rarityValue && rarityValue < 4) { //Uncommon
+      rarityText = "Uncommon"
+    } else if (4 <= rarityValue && rarityValue < 8) { // Rare
+      rarityText = "Rare"
+    } else if (8 <= rarityValue && rarityValue < 16) { // Very Rare
+      rarityText = "Very Rare"
+    } else if (16 <= rarityValue && rarityValue < 32) { //Legendary
+      rarityText = "Legendary"
+    } else if (32 <= rarityValue) { //Artifact
+      rarityText = "Artifact"
+    } else { //Common
+      rarityText = "Common"
+    }
+    break;
   case "Common":
     rarityText = "Common"
     break;

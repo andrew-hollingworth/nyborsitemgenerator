@@ -29,22 +29,19 @@ spans[5].text = (enchant3[2] ? "  " + enchant3[2] : "")
 spans[5].fontWeight = 400;  // normal weight
 spans[5].fontStyle = "normal";
 
-var f = this.getField("Description WithImage"); // this is the field that we are modifying
-f.richText = true;   // make sure we are dealing with a rich text field
-f.richValue = spans;
+var descText = this.getField("DescriptionTextOnly"); // this is the field that we are modifying
+descText.richText = true;   // make sure we are dealing with a rich text field
+descText.richValue = spans;
 
 for (var i = 0; i < spans.length; i++) {
-  if (f.value.length < 210) {
+  if (descText.value.length < 400) {
     spans[i].textSize = 10
-  } else if (f.value.length >= 210 && f.value.length < 275) {
+  } else if (descText.value.length >= 400 && f.value.length < 625) {
+    spans[i].textSize = 9
+  } else if (descText.value.length >= 625 && f.value.length < 800) {
     spans[i].textSize = 8
-  } else if (f.value.length >= 275 && f.value.length < 725) {
-    spans[i].textSize = 6
-  } else if (f.value.length >= 725 && f.value.length < 850) {
-    spans[i].textSize = 5
   } else {
-    spans[i].textSize = 4
+    spans[i].textSize = 7
   }
 }
-
-f.richValue = spans;
+descText.richValue = spans;

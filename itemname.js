@@ -29,4 +29,6 @@ if ((enchant1[0] + enchant2[0] >= 1) && enchant1[0] != enchant2[0]) {
       event.value = this.getField("Enchantment 1").value.split('--')[1] + " " + this.getField("ItemSubType").value;
       break;
   };
+} else {
+  event.value = ""
 }
